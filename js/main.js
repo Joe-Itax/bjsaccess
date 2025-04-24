@@ -119,3 +119,31 @@
 
 // Get Current Year
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+//
+document.addEventListener("DOMContentLoaded", function () {
+  const hash = window.location.hash;
+
+  if (hash) {
+    const tabTrigger = document.querySelector(
+      `button[data-bs-target="${hash}"]`
+    );
+
+    if (tabTrigger) {
+      const tab = new bootstrap.Tab(tabTrigger);
+      tab.show();
+
+      setTimeout(() => {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          const yOffset = -200;
+          const y =
+            targetElement.getBoundingClientRect().top +
+            window.pageYOffset +
+            yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 300);
+    }
+  }
+});

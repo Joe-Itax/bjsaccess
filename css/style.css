@@ -349,7 +349,7 @@ h6,
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 25% 5% 65% 5%;
-  height: 350px;
+  height: 380px;
   padding: 2rem 20px;
   transition: 0.5s;
 }
@@ -394,6 +394,94 @@ h6,
   opacity: 1;
 }
 
+/* Services on ServicePage */
+#servicesTabContent .box-card-service {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#servicesTabContent .box-card-service .service-card-item {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#servicesTabContent
+  .box-card-service
+  .service-card-item
+  .service-card-item-content {
+  background: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  padding: 1rem;
+  position: relative;
+  height: 100%;
+}
+
+#servicesTabContent
+  .box-card-service
+  .service-card-item
+  .service-card-item-content
+  .service-card-item-head {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#servicesTabContent
+  .box-card-service
+  .service-card-item
+  .service-card-item-content
+  .service-card-item-head
+  .service-card-item-icon {
+  color: var(--primary);
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f8f9fa;
+}
+
+#servicesTabContent
+  .box-card-service
+  .service-card-item
+  .service-card-item-content
+  .service-card-item-head
+  .service-card-item-num {
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+}
+
+#servicesTabContent
+  .box-card-service
+  .service-card-item
+  .service-card-item-content
+  .service-card-item-title {
+  font-weight: 700 !important;
+  margin-bottom: 10px;
+  color: var(--dark);
+  font-size: 1.3rem;
+}
+
+#servicesTabContent
+  .box-card-service
+  .service-card-item
+  .service-card-item-content
+  .service-card-item-text {
+}
+
 @media screen and (max-width: 992px) {
   .service-item-container {
     flex-direction: column;
@@ -402,19 +490,38 @@ h6,
   .service-item-box {
     width: 50%;
   }
-  .service-item {
-    height: 300px;
-  }
 }
 @media screen and (max-width: 768px) {
   .service-item-box {
     width: 100%;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   .service-item {
-    height: 330px;
+    height: 400px;
     padding: 1.5rem 10px;
+  }
+}
+
+/* Services on ServicePage Responsive*/
+@media screen and (max-width: 992px) {
+  #servicesTabContent .box-card-service {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #servicesTabContent .box-card-service .service-card-item {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #servicesTabContent .box-card-service .service-card-item {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #servicesTabContent .box-card-service .service-card-item {
+    width: 100%;
   }
 }
 
