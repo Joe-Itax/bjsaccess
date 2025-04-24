@@ -1,10 +1,12 @@
 /********** Template CSS **********/
 :root {
-  --primary: #06a3da;
-  --secondary: #34ad54;
+  --primary: #48bfc7;
+  --secondary: #06a3da;
+  /* --secondary: #34ad54; */
   --light: #eef9ff;
   --dark: #091e3e;
 }
+/* 48BFC7 */
 
 /*** Spinner ***/
 .spinner {
