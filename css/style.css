@@ -342,6 +342,10 @@ h6,
 
 .service-item-box {
   width: 33.3%;
+  transition: all 0.3s ease-in-out;
+}
+.service-item-box:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .service-item {
