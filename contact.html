@@ -111,7 +111,7 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
       <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-        <a href="/" class="navbar-brand p-0">
+        <a href="index.html" class="navbar-brand p-0">
           <img style="width: 60px" src="img/logo.png" alt="Logo Bjs Access" />
         </a>
         <button
@@ -125,18 +125,66 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
             <a href="/" class="nav-item nav-link">Accueil</a>
-            <a href="/service.html" class="nav-item nav-link">Nos services</a>
-            <a href="/about.html" class="nav-item nav-link">A-propos</a>
 
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Nos services</a
+              >
+              <div class="dropdown-menu m-0">
+                <a href="/service" class="dropdown-item"
+                  ><i
+                    class="fas fa-hands-helping text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Support Commercial</span></a
+                >
+                <a href="/service/coaching.html" class="dropdown-item"
+                  ><i
+                    class="fas fa-chalkboard-teacher text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Formation & Coaching</span></a
+                >
+                <a href="/service/invest.html" class="dropdown-item"
+                  ><i
+                    class="fas fa-chart-line text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Accompagnement à l’Investissement</span></a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >A-propos
+              </a>
+              <div class="dropdown-menu m-0">
+                <a href="/about" class="dropdown-item"
+                  ><i
+                    class="fas fa-circle-info text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Qui sommes-nous ?</span></a
+                >
+                <a href="/about/team.html" class="dropdown-item"
+                  ><i
+                    class="fas fa-people-group text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Notre équipe</span></a
+                >
+              </div>
+            </div>
+
+            <a href="/blog.html" class="nav-item nav-link">Blog</a>
             <a href="/contact.html" class="nav-item nav-link active">Contact</a>
           </div>
-          <butaton
-            type="button"
-            class="btn text-primary ms-3"
-            data-bs-toggle="modal"
-            data-bs-target="#searchModal"
-            ><i class="fa fa-search"></i
-          ></butaton>
         </div>
       </nav>
 
@@ -147,9 +195,11 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
         <div class="row py-5">
           <div class="col-12 pt-lg-5 mt-lg-5 text-center">
             <h1 class="display-4 text-white animated zoomIn">Nous Contacter</h1>
-            <a href="/" class="h5 text-white">Accueil</a>
+            <a href="/" class="h5 text-white user-select-none">Accueil</a>
             <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">Contact</a>
+            <span class="h5 text-white user-select-none" style="cursor: default"
+              >Contact</span
+            >
           </div>
         </div>
       </div>
