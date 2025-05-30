@@ -1,5 +1,5 @@
-// const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
-const BASE_API_URL = "http://localhost:3000/api";
+const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
+// const BASE_API_URL = "http://localhost:3000/api";
 
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contactForm");
