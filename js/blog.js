@@ -1,5 +1,5 @@
-// const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
-const BASE_API_URL = "http://localhost:3000/api";
+const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
+// const BASE_API_URL = "http://localhost:3000/api";
 // Références aux conteneurs HTML
 const blogPostsContainer = document.getElementById("blogPostsContainer");
 const blogPostsMainContainer = document.getElementById(
@@ -22,7 +22,7 @@ let searchTimeout;
  * @returns {string} Le HTML de l'article.
  */
 function createPostHtml(post) {
-  // Formatage de la date (ex: "01 Jan, 2045" -> "30 Mai, 2025")
+  // Formatage de la date (ex: "30 Mai, 2025")
   const date = new Date(post.createdAt);
   const formattedDate = date.toLocaleDateString("fr-FR", {
     day: "2-digit",
@@ -164,7 +164,6 @@ function createRecentPostHtml(post) {
 }
 
 // --- Fonctions de récupération et d'affichage des données ---
-
 /**
  * Récupère et affiche les articles de blog.
  * @param {number} page - Le numéro de page (par défaut 1).

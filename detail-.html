@@ -37,7 +37,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/blog.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -233,114 +232,155 @@
       <div class="container py-5">
         <div class="row g-5">
           <div class="col-lg-8">
-            <div class="mb-5 position-relative" id="blogDetailContainer">
-              <span id="loadingMessage"></span>
-              <div class="position-relative mb-4">
-                <div
-                  class="position-absolute top-0 start-0 bg-primary text-white mt-5 py-2 px-4"
-                  style="z-index: 20"
-                >
-                  <span
-                    class="text-white text-decoration-none"
-                    id="postCategory"
-                  >
-                  </span>
-                </div>
-                <div
-                  class="blog-img position-relative overflow-hidden"
-                  style="
-                    height: 400px;
-                    width: 100%;
-                    transition: all 0.3s ease-in-out;
-                  "
-                >
-                  <img
-                    class="img-fluid w-100 h-100"
-                    style="transition: all 0.3s ease-in-out; object-fit: cover"
-                    id="postImage"
-                    src=""
-                    alt=""
-                  />
-                </div>
-              </div>
-              <h1 class="mb-4" id="postTitle"></h1>
-              <div class="d-flex align-items-center text-muted small mb-3">
-                <small class="me-3 d-flex align-items-center">
-                  <i class="far fa-user text-primary me-2"></i
-                  ><span id="postAuthor"></span>
-                </small>
-                <small class="d-flex align-items-center">
-                  <i class="far fa-calendar-alt text-primary me-2"></i
-                  ><span id="postDate"></span>
-                </small>
-              </div>
-              <div class="post-content-container">
-                <div id="postContent"></div>
-              </div>
+            <!-- Blog Detail Start -->
+            <div class="mb-5">
+              <img
+                class="img-fluid w-100 rounded mb-5"
+                src="img/blog-1.jpg"
+                alt=""
+              />
+              <h1 class="mb-4">
+                Diam dolor est labore duo ipsum clita sed et lorem tempor duo
+              </h1>
+              <p>
+                Sadipscing labore amet rebum est et justo gubergren. Et eirmod
+                ipsum sit diam ut magna lorem. Nonumy vero labore lorem sanctus
+                rebum et lorem magna kasd, stet amet magna accusam consetetur
+                eirmod. Kasd accusam sit ipsum sadipscing et at at sanctus et.
+                Ipsum sit gubergren dolores et, consetetur justo invidunt at et
+                aliquyam ut et vero clita. Diam sea sea no sed dolores diam
+                nonumy, gubergren sit stet no diam kasd vero.
+              </p>
+              <p>
+                Voluptua est takimata stet invidunt sed rebum nonumy stet, clita
+                aliquyam dolores vero stet consetetur elitr takimata rebum
+                sanctus. Sit sed accusam stet sit nonumy kasd diam dolores,
+                sanctus lorem kasd duo dolor dolor vero sit et. Labore ipsum duo
+                sanctus amet eos et. Consetetur no sed et aliquyam ipsum justo
+                et, clita lorem sit vero amet amet est dolor elitr, stet et no
+                diam sit. Dolor erat justo dolore sit invidunt.
+              </p>
+              <p>
+                Diam dolor est labore duo invidunt ipsum clita et, sed et lorem
+                voluptua tempor invidunt at est sanctus sanctus. Clita dolores
+                sit kasd diam takimata justo diam lorem sed. Magna amet sed
+                rebum eos. Clita no magna no dolor erat diam tempor rebum
+                consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No
+                at tempor sea diam kasd, takimata ea nonumy elitr sadipscing
+                gubergren erat. Gubergren at lorem invidunt sadipscing rebum sit
+                amet ut ut, voluptua diam dolores at sadipscing stet. Clita
+                dolor amet dolor ipsum vero ea ea eos.
+              </p>
+              <p>
+                Voluptua est takimata stet invidunt sed rebum nonumy stet, clita
+                aliquyam dolores vero stet consetetur elitr takimata rebum
+                sanctus. Sit sed accusam stet sit nonumy kasd diam dolores,
+                sanctus lorem kasd duo dolor dolor vero sit et. Labore ipsum duo
+                sanctus amet eos et. Consetetur no sed et aliquyam ipsum justo
+                et, clita lorem sit vero amet amet est dolor elitr, stet et no
+                diam sit. Dolor erat justo dolore sit invidunt.
+              </p>
             </div>
+            <!-- Blog Detail End -->
+
+            <!-- Comment List Start -->
             <div class="mb-5">
               <div
                 class="section-title section-title-sm position-relative pb-3 mb-4"
               >
-                <h3 class="mb-0" id="commentCount"></h3>
+                <h3 class="mb-0">3 Comments</h3>
               </div>
-              <div id="commentListContainer"></div>
+              <div class="d-flex mb-4">
+                <img
+                  src="img/user.jpg"
+                  class="img-fluid rounded"
+                  style="width: 45px; height: 45px"
+                />
+                <div class="ps-3">
+                  <h6>
+                    <a href="">John Doe</a> <small><i>01 Jan 2045</i></small>
+                  </h6>
+                  <p>
+                    Diam amet duo labore stet elitr invidunt ea clita ipsum
+                    voluptua, tempor labore accusam ipsum et no at. Kasd diam
+                    tempor rebum magna dolores sed eirmod
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <img
+                  src="img/user.jpg"
+                  class="img-fluid rounded"
+                  style="width: 45px; height: 45px"
+                />
+                <div class="ps-3">
+                  <h6>
+                    <a href="">John Doe</a> <small><i>01 Jan 2045</i></small>
+                  </h6>
+                  <p>
+                    Diam amet duo labore stet elitr invidunt ea clita ipsum
+                    voluptua, tempor labore accusam ipsum et no at. Kasd diam
+                    tempor rebum magna dolores sed eirmod
+                  </p>
+                </div>
+              </div>
             </div>
+            <!-- Comment List End -->
+
+            <!-- Comment Form Start -->
             <div class="bg-light rounded p-5">
               <div
                 class="section-title section-title-sm position-relative pb-3 mb-4"
               >
-                <h3 class="mb-0">Commenter</h3>
+                <h3 class="mb-0">Leave A Comment</h3>
               </div>
-              <form id="commentForm">
+              <form>
                 <div class="row g-3">
                   <div class="col-12 col-sm-6">
                     <input
                       type="text"
                       class="form-control bg-white border-0"
-                      placeholder="Ton Nom *"
+                      placeholder="Your Name"
                       style="height: 55px"
-                      id="visitorName"
-                      name="visitorName"
-                      required
                     />
                   </div>
                   <div class="col-12 col-sm-6">
                     <input
                       type="email"
                       class="form-control bg-white border-0"
-                      placeholder="Ton Email *"
+                      placeholder="Your Email"
                       style="height: 55px"
-                      id="visitorEmail"
-                      name="visitorEmail"
-                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <input
+                      type="text"
+                      class="form-control bg-white border-0"
+                      placeholder="Website"
+                      style="height: 55px"
                     />
                   </div>
                   <div class="col-12">
                     <textarea
                       class="form-control bg-white border-0"
                       rows="5"
-                      placeholder="Commentaire *"
-                      id="commentContent"
-                      name="content"
-                      required
+                      placeholder="Comment"
                     ></textarea>
                   </div>
                   <div class="col-12">
-                    <button
-                      class="btn btn-primary w-100 py-3"
-                      type="submit"
-                      id="submitCommentButton"
-                    >
-                      Commenter
+                    <button class="btn btn-primary w-100 py-3" type="submit">
+                      Leave Your Comment
                     </button>
                   </div>
                 </div>
               </form>
             </div>
+            <!-- Comment Form End -->
           </div>
 
+          <!-- Sidebar Start -->
           <div class="col-lg-4">
+            <!-- Category Start -->
             <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
               <div
                 class="section-title section-title-sm position-relative pb-3 mb-4"
@@ -352,44 +392,122 @@
               >
                 <a
                   class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
-                  href="/blog.html"
-                  ><i class="bi bi-arrow-right me-2"></i>Tout</a
-                >
-              </div>
-              <div
-                class="link-animated d-flex flex-column justify-content-start"
-                id="categoriesList"
-              >
-                <a
-                  class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
                   href="#"
                   ><i class="bi bi-arrow-right me-2"></i>Web Design</a
                 >
+                <a
+                  class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
+                  href="#"
+                  ><i class="bi bi-arrow-right me-2"></i>Web Development</a
+                >
+                <a
+                  class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
+                  href="#"
+                  ><i class="bi bi-arrow-right me-2"></i>Web Development</a
+                >
+                <a
+                  class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
+                  href="#"
+                  ><i class="bi bi-arrow-right me-2"></i>Keyword Research</a
+                >
+                <a
+                  class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
+                  href="#"
+                  ><i class="bi bi-arrow-right me-2"></i>Email Marketing</a
+                >
               </div>
             </div>
+            <!-- Category End -->
+
+            <!-- Recent Post Start -->
             <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
               <div
                 class="section-title section-title-sm position-relative pb-3 mb-4"
               >
                 <h3 class="mb-0">Recent Post</h3>
               </div>
-              <div id="recentPostsList">
-                <div class="d-flex rounded overflow-hidden mb-3">
-                  <img
-                    class="img-fluid"
-                    src="img/blog-1.jpg"
-                    style="width: 100px; height: 100px; object-fit: cover"
-                    alt=""
-                  />
-                  <a
-                    href=""
-                    class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
-                    >Lorem ipsum dolor sit amet adipis elit
-                  </a>
-                </div>
+              <div class="d-flex rounded overflow-hidden mb-3">
+                <img
+                  class="img-fluid"
+                  src="img/blog-1.jpg"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                  alt=""
+                />
+                <a
+                  href=""
+                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
+                  >Lorem ipsum dolor sit amet adipis elit
+                </a>
+              </div>
+              <div class="d-flex rounded overflow-hidden mb-3">
+                <img
+                  class="img-fluid"
+                  src="img/blog-2.jpg"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                  alt=""
+                />
+                <a
+                  href=""
+                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
+                  >Lorem ipsum dolor sit amet adipis elit
+                </a>
+              </div>
+              <div class="d-flex rounded overflow-hidden mb-3">
+                <img
+                  class="img-fluid"
+                  src="img/blog-3.jpg"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                  alt=""
+                />
+                <a
+                  href=""
+                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
+                  >Lorem ipsum dolor sit amet adipis elit
+                </a>
+              </div>
+              <div class="d-flex rounded overflow-hidden mb-3">
+                <img
+                  class="img-fluid"
+                  src="img/blog-1.jpg"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                  alt=""
+                />
+                <a
+                  href=""
+                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
+                  >Lorem ipsum dolor sit amet adipis elit
+                </a>
+              </div>
+              <div class="d-flex rounded overflow-hidden mb-3">
+                <img
+                  class="img-fluid"
+                  src="img/blog-2.jpg"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                  alt=""
+                />
+                <a
+                  href=""
+                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
+                  >Lorem ipsum dolor sit amet adipis elit
+                </a>
+              </div>
+              <div class="d-flex rounded overflow-hidden mb-3">
+                <img
+                  class="img-fluid"
+                  src="img/blog-3.jpg"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                  alt=""
+                />
+                <a
+                  href=""
+                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
+                  >Lorem ipsum dolor sit amet adipis elit
+                </a>
               </div>
             </div>
+            <!-- Recent Post End -->
           </div>
+          <!-- Sidebar End -->
         </div>
       </div>
     </div>
@@ -554,7 +672,6 @@
     <script src="js/main.js"></script>
 
     <!-- Blog -->
-    <!-- <script src="js/blog.js"></script> -->
-    <script src="js/blog-single.js"></script>
+    <script src="js/blog.js"></script>
   </body>
 </html>
