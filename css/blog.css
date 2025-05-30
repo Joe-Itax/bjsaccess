@@ -1,0 +1,435 @@
+/* Importation des polices utilisées dans l'éditeur Tiptap */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Définition des variables CSS pour le thème clair */
+.post-content-container {
+  --tt-inline-code-bg-color: #f0f0f0;
+  --tt-inline-code-text-color: #666;
+  --tt-inline-code-border-color: #ccc;
+  --tt-codeblock-bg: #f9f9f9;
+  --tt-codeblock-text: #333;
+  --tt-codeblock-border: #eee;
+  --tt-checklist-bg-color: #f0f0f0;
+  --tt-checklist-bg-active-color: #333;
+  --tt-checklist-border-color: #ccc;
+  --tt-checklist-border-active-color: #333;
+  --tt-checklist-check-icon-color: white;
+  --tt-checklist-text-active: #888;
+  --blockquote-bg-color: #333;
+  --link-text-color: #007bff;
+  --separator-color: #ddd;
+  --tt-radius-xs: 0.25rem;
+  --tag-bg-color: oklch(93.2% 0.032 255.585);
+  --tag-text-color: oklch(42.4% 0.199 265.638);
+
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Variables pour le thème sombre */
+.dark .post-content-container {
+  --tt-inline-code-bg-color: #2a2a2a;
+  --tt-inline-code-text-color: #b3b3b3;
+  --tt-inline-code-border-color: #444;
+  --tt-codeblock-bg: #222;
+  --tt-codeblock-text: #b3b3b3;
+  --tt-codeblock-border: #444;
+  --tt-checklist-bg-color: #2a2a2a;
+  --tt-checklist-bg-active-color: #ccc;
+  --tt-checklist-border-color: #444;
+  --tt-checklist-border-active-color: #ccc;
+  --tt-checklist-check-icon-color: black;
+  --tt-checklist-text-active: #777;
+  --blockquote-bg-color: #ccc;
+  --link-text-color: #69c0ff;
+  --separator-color: #555;
+  --tag-bg-color: oklch(93.2% 0.032 255.585);
+  --tag-text-color: oklch(42.4% 0.199 265.638);
+  color: #f0f0f0;
+}
+
+/* HEADINGS (Titres) */
+.post-content-container h1,
+.post-content-container h2,
+.post-content-container h3,
+.post-content-container h4 {
+  position: relative;
+  color: inherit;
+  font-style: inherit;
+}
+
+.post-content-container h1:first-child,
+.post-content-container h2:first-child,
+.post-content-container h3:first-child,
+.post-content-container h4:first-child {
+  margin-top: 0;
+}
+
+.post-content-container h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+}
+
+.post-content-container h2 {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.post-content-container h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.post-content-container h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* PARAGRAPH */
+.post-content-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.post-content-container p:first-child {
+  margin-top: 0;
+}
+
+/* LISTS (Ordonnées et non ordonnées) */
+.post-content-container ol,
+.post-content-container ul {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.post-content-container ol:first-child,
+.post-content-container ul:first-child {
+  margin-top: 0;
+}
+
+.post-content-container ol:last-child,
+.post-content-container ul:last-child {
+  margin-bottom: 0;
+}
+
+.post-content-container ol ol,
+.post-content-container ol ul,
+.post-content-container ul ol,
+.post-content-container ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.post-content-container li p {
+  margin-top: 0;
+}
+
+.post-content-container ol {
+  list-style: decimal;
+}
+
+.post-content-container ol ol {
+  list-style: lower-alpha;
+}
+
+.post-content-container ol ol ol {
+  list-style: lower-roman;
+}
+
+.post-content-container ul:not([data-type="taskList"]) {
+  list-style: disc;
+}
+
+.post-content-container ul:not([data-type="taskList"]) ul {
+  list-style: circle;
+}
+
+.post-content-container ul:not([data-type="taskList"]) ul ul {
+  list-style: disc;
+}
+
+/* Task lists (rendu statique) */
+.post-content-container ul[data-type="taskList"] {
+  padding-left: 0.25em;
+}
+
+.post-content-container ul[data-type="taskList"] li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.post-content-container ul[data-type="taskList"] li:not(:has(> p:first-child)) {
+  list-style-type: none;
+}
+
+.post-content-container ul[data-type="taskList"] li label {
+  position: relative;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.post-content-container
+  ul[data-type="taskList"]
+  li
+  label
+  input[type="checkbox"] {
+  display: none;
+}
+
+.post-content-container ul[data-type="taskList"] li label span {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid var(--tt-checklist-border-color);
+  border-radius: var(--tt-radius-xs, 0.25rem);
+  background-color: var(--tt-checklist-bg-color);
+  position: relative;
+  transition: background-color 80ms ease-out, border-color 80ms ease-out;
+}
+
+.post-content-container ul[data-type="taskList"] li label span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.75em;
+  height: 0.75em;
+  background-color: var(--tt-checklist-check-icon-color);
+  opacity: 0;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M21.4142%204.58579C22.1953%205.36683%2022.1953%206.63317%2021.4142%207.41421L10.4142%2018.4142C9.63317%2019.1953%208.36684%2019.1953%207.58579%2018.4142L2.58579%2013.4142C1.80474%2012.6332%201.80474%2011.3668%202.58579%2010.5858C3.36683%209.80474%204.63317%209.80474%205.41421%2010.5858L9%2014.1716L18.5858%204.58579C19.3668%203.80474%2020.6332%203.80474%2021.4142%204.58579Z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E")
+    center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M21.4142%204.58579C22.1953%205.36683%2022.1953%206.63317%2021.4142%207.41421L10.4142%2018.4142C9.63317%2019.1953%208.36684%2019.1953%207.58579%2018.4142L2.58579%2013.4142C1.80474%2012.6332%201.80474%2011.3668%202.58579%2010.5858C3.36683%209.80474%204.63317%209.80474%205.41421%2010.5858L9%2014.1716L18.5858%204.58579C19.3668%203.80474%2020.6332%203.80474%2021.4142%204.58579Z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E")
+    center/contain no-repeat;
+}
+
+.post-content-container
+  ul[data-type="taskList"]
+  li[data-checked="true"]
+  > div
+  > p,
+.post-content-container
+  ul[data-type="taskList"]
+  li[data-checked="true"]
+  > div
+  > p
+  span {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.post-content-container
+  ul[data-type="taskList"]
+  li[data-checked="true"]
+  label
+  span {
+  background: var(--tt-checklist-bg-active-color);
+  border-color: var(--tt-checklist-border-active-color);
+}
+
+.post-content-container
+  ul[data-type="taskList"]
+  li[data-checked="true"]
+  label
+  span::before {
+  opacity: 1;
+}
+
+.post-content-container ul[data-type="taskList"] li div {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/* INLINE CODE */
+.post-content-container code {
+  background-color: var(--tt-inline-code-bg-color);
+  color: var(--tt-inline-code-text-color);
+  border: 1px solid var(--tt-inline-code-border-color);
+  font-family: "JetBrains Mono NL", monospace;
+  font-size: 0.875em;
+  line-height: 1.4;
+  border-radius: 6px/0.375rem;
+  padding: 0.1em 0.2em;
+}
+
+/* CODE BLOCKS */
+.post-content-container pre {
+  background-color: var(--tt-codeblock-bg);
+  color: var(--tt-codeblock-text);
+  border: 1px solid var(--tt-codeblock-border);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  font-size: 1rem;
+  border-radius: 6px/0.375rem;
+  overflow-x: auto;
+}
+
+.post-content-container pre code {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-text-fill-color: inherit;
+  color: inherit;
+  display: block;
+  white-space: pre-wrap;
+}
+
+/* BLOCKQUOTE */
+.post-content-container blockquote {
+  position: relative;
+  padding-left: 1em;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
+  margin: 1.5rem 0;
+}
+
+.post-content-container blockquote p {
+  margin-top: 0;
+}
+
+.post-content-container blockquote::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0.25em;
+  background-color: var(--blockquote-bg-color);
+  content: "";
+  border-radius: 0;
+}
+
+/* HORIZONTAL RULE (Séparateur) */
+.post-content-container hr {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border: none;
+  height: 1px;
+  background-color: var(--separator-color);
+}
+
+/* LINKS */
+.post-content-container a {
+  color: var(--link-text-color);
+  text-decoration: underline;
+}
+
+.post-content-container a span {
+  text-decoration: underline;
+}
+
+/* TEXT DECORATION */
+.post-content-container s span {
+  text-decoration: line-through;
+}
+
+.post-content-container u span {
+  text-decoration: underline;
+}
+
+/* IMAGES */
+.post-content-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-content-container > img:not([data-type="emoji"] img) {
+  margin: 2rem 0;
+  outline: 0.125rem solid transparent;
+  border-radius: var(--tt-radius-xs, 0.25rem);
+}
+
+/* EMOJI */
+.post-content-container [data-type="emoji"] img {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+}
+
+/* MENTION */
+.post-content-container [data-type="mention"] {
+  display: inline-block;
+  color: var(--link-text-color);
+  font-weight: 500;
+}
+
+/* THREADS */
+.post-content-container
+  .tiptap-thread.tiptap-thread--unresolved.tiptap-thread--inline {
+  color: inherit;
+  border-bottom: 2px dashed orange;
+  font-weight: 600;
+}
+
+.post-content-container
+  .tiptap-thread.tiptap-thread--resolved.tiptap-thread--inline {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.post-content-container .tiptap-thread.tiptap-thread--block:has(img) {
+  outline: 0.125rem solid orange;
+  border-radius: var(--tt-radius-xs, 0.25rem);
+  overflow: hidden;
+  width: fit-content;
+  margin: 2rem 0;
+}
+
+.post-content-container .tiptap-thread.tiptap-thread--block:not(:has(img)) {
+  border-radius: 0.25rem;
+  border-bottom: 0.125rem dashed orange;
+  padding-bottom: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* MATHEMATICS */
+.post-content-container .Tiptap-mathematics-render {
+  padding: 0 0.25rem;
+  border-radius: var(--tt-radius-xs);
+  display: inline-block;
+  background: #f0f0f0;
+  border: 1px solid #007bff;
+}
+
+.dark .post-content-container .Tiptap-mathematics-render {
+  background: #2a2a2a;
+  border: 1px solid #69c0ff;
+}
+
+/* Placeholder */
+.post-content-container .is-empty[data-placeholder]::before {
+  content: "";
+  display: none;
+}
+
+/* Styles pour les tags */
+.post-content-container .tiptap-tag {
+  display: inline-flex;
+  align-items: center;
+  color: var(--tag-text-color, #193cb8);
+  font-weight: 500;
+  font-style: normal;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.dark .post-content-container .tiptap-tag {
+  color: var(--tag-dark-text-color, #69c0ff);
+}
