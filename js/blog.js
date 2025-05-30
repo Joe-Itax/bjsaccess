@@ -1,5 +1,5 @@
-const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
-// const BASE_API_URL = "http://localhost:3000/api";
+// const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
+const BASE_API_URL = "http://localhost:3000/api";
 // Références aux conteneurs HTML
 const blogPostsContainer = document.getElementById("blogPostsContainer");
 const blogPostsMainContainer = document.getElementById(
@@ -119,15 +119,18 @@ function createPostHtml(post) {
  * @returns {string} Le HTML de la catégorie.
  */
 function createCategoryHtml(category) {
+  const publishedPostCount = category.posts
+    ? category.posts.filter((post) => post.published).length
+    : 0;
+
+  if (publishedPostCount === 0) {
+    return ""; // Ne retourne rien si aucun post publié dans cette catégorie
+  }
   return `
     <a
       class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
       href="/blog.html?category=${category.slug}"
-      ><i class="bi bi-arrow-right me-2"></i>${
-        category.name
-      } <span class="badge bg-primary float-end">${
-    category._count.posts || 0
-  }</span></a
+      ><i class="bi bi-arrow-right me-2"></i>${category.name} <span class="badge bg-primary float-end">${publishedPostCount}</span></a
     >
   `;
 }
@@ -230,21 +233,16 @@ async function fetchCategories() {
 
     categoriesList.innerHTML = ""; // Vider le conteneur
 
-    const filteredCategories = categories.filter(
-      (category) => category._count.posts > 0
-    );
+    const categoriesHtml = categories
+      .map((category) => createCategoryHtml(category))
+      .join("");
 
-    if (filteredCategories.length === 0) {
-      categoriesList.innerHTML = `<div class="text-center py-3">Aucune catégorie disponible.</div>`;
-      return;
+    if (categoriesHtml.trim() === "") {
+      // Vérifiez si le HTML généré est vide
+      categoriesList.innerHTML = `<div class="text-center py-3">Aucune catégorie disponible avec des articles publiés.</div>`;
+    } else {
+      categoriesList.insertAdjacentHTML("beforeend", categoriesHtml);
     }
-
-    filteredCategories.forEach((category) => {
-      categoriesList.insertAdjacentHTML(
-        "beforeend",
-        createCategoryHtml(category)
-      );
-    });
   } catch (error) {
     console.error("Erreur lors de la récupération des catégories:", error);
     categoriesList.innerHTML = `<div class="text-center text-danger py-3">Erreur de chargement des catégories.</div>`;

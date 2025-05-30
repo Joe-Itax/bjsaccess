@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>BJSACCESS</title>
+    <title>BJS Access</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="BJS BJSACCESS" name="keywords" />
     <meta
@@ -660,13 +660,15 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
               class="rounded h-100 d-flex align-items-center p-5 wow zoomIn"
               data-wow-delay="0.9s"
             >
-              <form>
+              <form id="contactForm">
                 <div class="row g-3">
                   <div class="col-xl-12">
                     <input
                       type="text"
                       class="form-control bg-light border-0"
-                      placeholder="Votre nom"
+                      placeholder="Votre nom *"
+                      name="name"
+                      id="contactName"
                       style="height: 55px"
                       required
                     />
@@ -675,7 +677,9 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
                     <input
                       type="email"
                       class="form-control bg-light border-0"
-                      placeholder="Votre adresse mail"
+                      placeholder="Votre adresse mail *"
+                      name="email"
+                      id="contactEmail"
                       style="height: 55px"
                       required
                     />
@@ -685,27 +689,46 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
                       class="form-select bg-light border-0"
                       style="height: 55px"
                       aria-placeholder="Selectionner un service"
-                      aria-label="Selectionner un service"
+                      aria-label="Selectionner un service *"
+                      id="contactSubject"
+                      name="subject"
                       required
                     >
-                      <option disabled>Selectionner un service</option>
-                      <option value="1">Service 1</option>
-                      <option value="2">Service 2</option>
-                      <option value="3">Service 3</option>
-                      <option value="autre">Autre</option>
+                      <option value="" disabled selected>
+                        Sélectionnez un sujet
+                      </option>
+                      <option value="Demande d'informations générales">
+                        Demande d'informations générales
+                      </option>
+                      <option value="Partenariat / Collaboration">
+                        Partenariat / Collaboration
+                      </option>
+                      <option value="Feedback / Suggestion">
+                        Feedback / Suggestion
+                      </option>
+                      <option value="Problème avec le site">
+                        Problème avec le site
+                      </option>
+                      <option value="Autre">Autre</option>
                     </select>
                   </div>
                   <div class="col-12">
                     <textarea
                       class="form-control bg-light border-0"
                       rows="3"
-                      placeholder="Votre message"
+                      placeholder="Votre message *"
+                      name="message"
+                      id="contactMessage"
                       required
                     ></textarea>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-dark w-100 py-3" type="submit">
-                      Envoyer
+                    <button
+                      class="btn btn-dark w-100 py-3"
+                      type="submit"
+                      id="submitContact"
+                    >
+                      Envoyer le message
                     </button>
                   </div>
                 </div>
@@ -863,5 +886,6 @@ commercial, la facilitation et la promotion des investissements en RDC ainsi qu'
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
