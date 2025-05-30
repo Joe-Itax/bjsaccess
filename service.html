@@ -111,7 +111,11 @@ stratégie commerciale, renforcer les compétences des équipes et faciliter les
     <div class="container-fluid position-relative p-0">
       <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <a href="/" class="navbar-brand p-0">
-          <img style="width: 60px" src="img/logo.png" alt="Logo Bjs Access" />
+          <img
+            style="width: 60px"
+            src="../img/logo.png"
+            alt="Logo Bjs Access"
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -124,20 +128,66 @@ stratégie commerciale, renforcer les compétences des équipes et faciliter les
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
             <a href="/" class="nav-item nav-link">Accueil</a>
-            <a href="/service.html" class="nav-item nav-link active"
-              >Nos services</a
-            >
-            <a href="/about.html" class="nav-item nav-link">A-propos</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle active"
+                data-bs-toggle="dropdown"
+                >Nos services</a
+              >
+              <div class="dropdown-menu m-0">
+                <a href="/service" class="dropdown-item"
+                  ><i
+                    class="fas fa-hands-helping text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Support Commercial</span></a
+                >
+                <a href="/service/coaching.html" class="dropdown-item"
+                  ><i
+                    class="fas fa-chalkboard-teacher text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Formation & Coaching</span></a
+                >
+                <a href="/service/invest.html" class="dropdown-item"
+                  ><i
+                    class="fas fa-chart-line text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Accompagnement à l’Investissement</span></a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >A-propos
+              </a>
+              <div class="dropdown-menu m-0">
+                <a href="/about" class="dropdown-item"
+                  ><i
+                    class="fas fa-circle-info text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Qui sommes-nous ?</span></a
+                >
+                <a href="/about/team.html" class="dropdown-item"
+                  ><i
+                    class="fas fa-people-group text-primary"
+                    style="padding-right: 8px"
+                  ></i>
+                  <span>Notre équipe</span></a
+                >
+              </div>
+            </div>
+
+            <a href="/blog.html" class="nav-item nav-link">Blog</a>
 
             <a href="/contact.html" class="nav-item nav-link">Contact</a>
           </div>
-          <butaton
-            type="button"
-            class="btn text-primary ms-3"
-            data-bs-toggle="modal"
-            data-bs-target="#searchModal"
-            ><i class="fa fa-search"></i
-          ></butaton>
         </div>
       </nav>
 
@@ -147,10 +197,16 @@ stratégie commerciale, renforcer les compétences des équipes et faciliter les
       >
         <div class="row py-5">
           <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Services</h1>
-            <a href="/" class="h5 text-white">Accueil</a>
+            <h1 class="display-4 text-white animated zoomIn">
+              Decrouvrez Nos Services
+            </h1>
+            <a href="/" class="h5 text-white user-select-none">Accueil</a>
             <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">Services</a>
+            <a href="" class="h5 text-white user-select-none">Services</a>
+            <i class="far fa-circle text-white px-2"></i>
+            <span class="h5 text-white user-select-none" style="cursor: default"
+              >Support commercial</span
+            >
           </div>
         </div>
       </div>
@@ -578,226 +634,6 @@ stratégie commerciale, renforcer les compétences des équipes et faciliter les
     </section>
     <!-- Service End -->
 
-    <!-- Service Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-5">
-        <div
-          class="section-title text-center position-relative pb-3 mb-5 mx-auto"
-          style="max-width: 600px"
-        >
-          <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
-          <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
-        </div>
-        <div class="row g-5">
-          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-            <div
-              class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
-            >
-              <div class="service-icon">
-                <i class="fa fa-shield-alt text-white"></i>
-              </div>
-              <h4 class="mb-3">Cyber Security</h4>
-              <p class="m-0">
-                Amet justo dolor lorem kasd amet magna sea stet eos vero lorem
-                ipsum dolore sed
-              </p>
-              <a class="btn btn-lg btn-primary rounded" href="">
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-            <div
-              class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
-            >
-              <div class="service-icon">
-                <i class="fa fa-chart-pie text-white"></i>
-              </div>
-              <h4 class="mb-3">Data Analytics</h4>
-              <p class="m-0">
-                Amet justo dolor lorem kasd amet magna sea stet eos vero lorem
-                ipsum dolore sed
-              </p>
-              <a class="btn btn-lg btn-primary rounded" href="">
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-            <div
-              class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
-            >
-              <div class="service-icon">
-                <i class="fa fa-code text-white"></i>
-              </div>
-              <h4 class="mb-3">Web Development</h4>
-              <p class="m-0">
-                Amet justo dolor lorem kasd amet magna sea stet eos vero lorem
-                ipsum dolore sed
-              </p>
-              <a class="btn btn-lg btn-primary rounded" href="">
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-            <div
-              class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
-            >
-              <div class="service-icon">
-                <i class="fab fa-android text-white"></i>
-              </div>
-              <h4 class="mb-3">Apps Development</h4>
-              <p class="m-0">
-                Amet justo dolor lorem kasd amet magna sea stet eos vero lorem
-                ipsum dolore sed
-              </p>
-              <a class="btn btn-lg btn-primary rounded" href="">
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-            <div
-              class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
-            >
-              <div class="service-icon">
-                <i class="fa fa-search text-white"></i>
-              </div>
-              <h4 class="mb-3">SEO Optimization</h4>
-              <p class="m-0">
-                Amet justo dolor lorem kasd amet magna sea stet eos vero lorem
-                ipsum dolore sed
-              </p>
-              <a class="btn btn-lg btn-primary rounded" href="">
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-            <div
-              class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5"
-            >
-              <h3 class="text-white mb-3">Call Us For Quote</h3>
-              <p class="text-white mb-3">
-                Clita ipsum magna kasd rebum at ipsum amet dolor justo dolor est
-                magna stet eirmod
-              </p>
-              <h2 class="text-white mb-0">+012 345 6789</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Service End -->
-
-    <!-- Testimonial Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-5">
-        <div
-          class="section-title text-center position-relative pb-3 mb-4 mx-auto"
-          style="max-width: 600px"
-        >
-          <h5 class="fw-bold text-primary text-uppercase">Témoignages</h5>
-          <h2 class="mb-0">Clients Satisfaits</h2>
-        </div>
-        <div
-          class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.6s"
-        >
-          <div class="testimonial-item bg-light my-4">
-            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-              <img
-                class="img-fluid rounded"
-                src="img/testimonial-1.jpg"
-                style="width: 60px; height: 60px"
-              />
-              <div class="ps-4">
-                <h4 class="text-primary mb-1">Client Name</h4>
-                <small class="text-uppercase">Profession</small>
-              </div>
-            </div>
-            <div class="pt-4 pb-5 px-5">
-              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
-              stet amet eirmod eos labore diam
-            </div>
-          </div>
-          <div class="testimonial-item bg-light my-4">
-            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-              <img
-                class="img-fluid rounded"
-                src="img/testimonial-2.jpg"
-                style="width: 60px; height: 60px"
-              />
-              <div class="ps-4">
-                <h4 class="text-primary mb-1">Client Name</h4>
-                <small class="text-uppercase">Profession</small>
-              </div>
-            </div>
-            <div class="pt-4 pb-5 px-5">
-              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
-              stet amet eirmod eos labore diam
-            </div>
-          </div>
-          <div class="testimonial-item bg-light my-4">
-            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-              <img
-                class="img-fluid rounded"
-                src="img/testimonial-3.jpg"
-                style="width: 60px; height: 60px"
-              />
-              <div class="ps-4">
-                <h4 class="text-primary mb-1">Client Name</h4>
-                <small class="text-uppercase">Profession</small>
-              </div>
-            </div>
-            <div class="pt-4 pb-5 px-5">
-              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
-              stet amet eirmod eos labore diam
-            </div>
-          </div>
-          <div class="testimonial-item bg-light my-4">
-            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-              <img
-                class="img-fluid rounded"
-                src="img/testimonial-4.jpg"
-                style="width: 60px; height: 60px"
-              />
-              <div class="ps-4">
-                <h4 class="text-primary mb-1">Client Name</h4>
-                <small class="text-uppercase">Profession</small>
-              </div>
-            </div>
-            <div class="pt-4 pb-5 px-5">
-              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
-              stet amet eirmod eos labore diam
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Testimonial End -->
-
-    <!-- Vendor Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-5 mb-5">
-        <div class="bg-white">
-          <div class="owl-carousel vendor-carousel">
-            <img src="img/vendor-1.jpg" alt="" />
-            <img src="img/vendor-2.jpg" alt="" />
-            <img src="img/vendor-3.jpg" alt="" />
-            <img src="img/vendor-4.jpg" alt="" />
-            <img src="img/vendor-5.jpg" alt="" />
-            <img src="img/vendor-6.jpg" alt="" />
-            <img src="img/vendor-7.jpg" alt="" />
-            <img src="img/vendor-8.jpg" alt="" />
-            <img src="img/vendor-9.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Vendor End -->
-
     <!-- Footer Start -->
     <div
       class="container-fluid bg-dark text-light mt-5 wow fadeInUp"
@@ -874,11 +710,11 @@ stratégie commerciale, renforcer les compétences des équipes et faciliter les
                     ><i class="bi bi-arrow-right text-primary me-2"></i
                     >Accueil</a
                   >
-                  <a class="text-light mb-2" href="/service.html"
+                  <a class="text-light mb-2" href="/service"
                     ><i class="bi bi-arrow-right text-primary me-2"></i>Nos
                     services</a
                   >
-                  <a class="text-light mb-2" href="/about.html"
+                  <a class="text-light mb-2" href="/about"
                     ><i class="bi bi-arrow-right text-primary me-2"></i
                     >A-propos</a
                   >
@@ -904,8 +740,16 @@ stratégie commerciale, renforcer les compétences des équipes et faciliter les
       >
         <p class="mb-0 text-center">
           Copyright &copy; <span id="current-year"></span>
-          <span class="text-white border-bottom text-uppercase">BJSACCESS</span
-          >. Tous droits réservés.
+          <span class="text-white border-bottom text-uppercase">BJSACCESS</span>
+          <span>.</span>
+          <a
+            href="https://carmelcode.vercel.app"
+            target="_blank"
+            class="border-bottom"
+            >CarmelCode</a
+          >
+          <span>.</span>
+          <span>Tous droits réservés.</span>
         </p>
       </div>
     </div>
