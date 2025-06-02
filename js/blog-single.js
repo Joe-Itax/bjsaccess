@@ -179,7 +179,7 @@ async function fetchCommentsForPost(postSlug) {
       }`;
 
     if (comments.length === 0) {
-      commentListContainer.innerHTML = `<div class="text-center py-3">Aucun commentaire pour le moment.</div>`;
+      commentListContainer.innerHTML = `<div class="text-center py-3">Soit le premier à commenter cet article !!!</div>`;
       return;
     }
 

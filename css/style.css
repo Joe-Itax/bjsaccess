@@ -669,3 +669,8 @@ h6,
     margin-bottom: -75px;
   }
 }
+
+.partenaires-carousel .owl-item {
+  /* display: flex; */
+  width: 145px !important;
+}
