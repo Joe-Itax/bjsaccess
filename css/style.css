@@ -671,6 +671,11 @@ h6,
 }
 
 .partenaires-carousel .owl-item {
-  /* display: flex; */
-  width: 145px !important;
+  width: 100px !important;
 }
+/* @media (max-width: 600px) {
+  .partenaires-carousel .owl-item {
+    width: 80px !important;
+    margin-right: 30px !important;
+  }
+} */
