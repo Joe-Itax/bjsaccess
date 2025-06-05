@@ -1,6 +1,5 @@
 const BASE_API_URL = "https://bjsaccess-back-office.vercel.app/api";
-// const BASE_API_URL = "http://localhost:3000/api"
-// ;
+// const BASE_API_URL = "http://localhost:3000/api";
 
 // Références aux conteneurs HTML de la page de détail
 const blogDetailContainer = document.getElementById("blogDetailContainer");
