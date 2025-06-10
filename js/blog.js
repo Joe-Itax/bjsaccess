@@ -34,7 +34,7 @@ function createPostHtml(post) {
 
   return `
 <div
-  class="col-md-6 wow slideInUp"
+  class="col-md-6 wow slideInUp box-post-card"
   data-wow-delay="0.1s"
 >
   <div
@@ -75,7 +75,7 @@ function createPostHtml(post) {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;">${post.title}</h4>
-      <div class="text-muted mb-4" style="
+      <div class="text-muted mb-4 box-post-content" style="
         display: -webkit-box!important;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;

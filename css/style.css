@@ -76,6 +76,9 @@ h6,
 .fw-medium {
   font-weight: 600 !important;
 }
+h5 {
+  margin-bottom: 0 !important;
+}
 
 /*** Button ***/
 .btn {
@@ -679,3 +682,7 @@ h6,
     margin-right: 30px !important;
   }
 } */
+
+.box-post-card .box-post-content img {
+  display: none;
+}
